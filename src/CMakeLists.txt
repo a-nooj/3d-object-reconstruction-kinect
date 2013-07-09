@@ -1,0 +1,38 @@
+cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+
+project(3d-object-reconstruction-kinect)
+
+find_package(PCL 1.3 REQUIRED COMPONENTS common features filters io kdtree keypoints octree range_image registration sample_consensus segmentation surface visualization)
+
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+add_definitions(-Wno-deprecated -DEIGEN_DONT_VECTORIZE -DEIGEN_DISABLE_UNALIGNED_ARRAY_ASSERT)
+
+add_executable(1_get_input 1_get_input.cpp)
+add_executable(2_filter_depth 2_filter_depth.cpp)
+add_executable(3_downsample_depth 3_downsample_depth.cpp)
+add_executable(4_outlier_free_depth 4_outlier_free_depth.cpp)
+add_executable(5_remove_background 5_remove_background.cpp)
+add_executable(6_extract_cluster 6_extract_cluster.cpp)
+add_executable(7_estimate_surface_normals 7_estimate_surface_normals.cpp)
+add_executable(8_detect_keypoints 8_detect_keypoints.cpp)
+add_executable(9_compute_local_descriptors 9_compute_local_descriptors.cpp)
+add_executable(10_alignment 10_alignment.cpp)
+add_executable(11_cloud_smoothing 11_cloud_smoothing.cpp)
+add_executable(12_generate_surface 12_generate_surface.cpp)
+
+target_link_libraries(1_get_input ${PCL_LIBRARIES})
+target_link_libraries(2_filter_depth ${PCL_LIBRARIES})
+target_link_libraries(3_downsample_depth ${PCL_LIBRARIES})
+target_link_libraries(4_outlier_free_depth ${PCL_LIBRARIES})
+target_link_libraries(5_remove_background ${PCL_LIBRARIES})
+target_link_libraries(6_extract_cluster ${PCL_LIBRARIES})
+target_link_libraries(7_estimate_surface_normals ${PCL_LIBRARIES})
+target_link_libraries(8_detect_keypoints ${PCL_LIBRARIES})
+target_link_libraries(9_compute_local_descriptors ${PCL_LIBRARIES})
+target_link_libraries(10_alignment ${PCL_LIBRARIES})
+target_link_libraries(11_cloud_smoothing ${PCL_LIBRARIES})
+target_link_libraries(12_generate_surface ${PCL_LIBRARIES})
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations")

@@ -1,0 +1,12 @@
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/10_alignment.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/11_cloud_smoothing.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/12_generate_surface.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/1_get_input.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/2_filter_depth.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/3_downsample_depth.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/4_outlier_free_depth.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/5_remove_background.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/6_extract_cluster.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/7_estimate_surface_normals.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/8_detect_keypoints.dir
+/home/anujpasricha/3d-object-reconstruction-kinect/build/CMakeFiles/9_compute_local_descriptors.dir

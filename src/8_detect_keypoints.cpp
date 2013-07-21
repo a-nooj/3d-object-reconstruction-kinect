@@ -28,8 +28,8 @@ int main (int argc, char** argv) {
 
 	pcl::SIFTKeypoint<pcl::PointXYZRGB, pcl::PointWithScale> sift_detect;
 	//sift_detect.setSearchMethod (pcl::search::Search<pcl::PointXYZRGB>::Ptr (new pcl::search::KdTree<pcl::PointXYZRGB>));
-pcl::search::KdTree<pcl::PointXYZRGB>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZRGB> ());
-sift_detect.setSearchMethod (tree);
+	pcl::search::KdTree<pcl::PointXYZRGB>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZRGB> ());
+	sift_detect.setSearchMethod (tree);
 	sift_detect.setScales (min_scale, nr_octaves, nr_scales_per_octave);
 	sift_detect.setMinimumContrast (min_contrast);
 	sift_detect.setSearchSurface (cloud);
